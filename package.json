@@ -1,0 +1,18 @@
+{
+  "name": "opengagan",
+  "private": true,
+  "workspaces": ["app", "server", "shared"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=app\"",
+    "build": "npm run build --workspace=shared && npm run build --workspace=server && npm run build --workspace=app",
+    "test": "npm run test --workspace=server",
+    "lint": "npm run lint --workspace=app && npm run lint --workspace=server",
+    "seed": "tsx seed/airports.ts && tsx seed/udan-traffic.ts"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "dotenv": "^16.0.0",
+    "mongoose": "^8.0.0",
+    "tsx": "^4.0.0"
+  }
+}

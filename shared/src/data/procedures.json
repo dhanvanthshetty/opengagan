@@ -1,0 +1,17 @@
+{
+  "waypointOrder": ["IAF", "IF", "FAF", "MAP", "MISSED"],
+  "waypointColors": {
+    "IAF": "#3b82f6",
+    "IF": "#8b5cf6",
+    "FAF": "#f59e0b",
+    "MAP": "#ef4444",
+    "MISSED": "#10b981"
+  },
+  "waypointLabels": {
+    "IAF": "IAF — Initial Approach Fix",
+    "IF": "IF — Intermediate Fix",
+    "FAF": "FAF — Final Approach Fix",
+    "MAP": "MAP — Missed Approach Point",
+    "MISSED": "MISSED — Missed Approach"
+  }
+}

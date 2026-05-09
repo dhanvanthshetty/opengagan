@@ -1,0 +1,101 @@
+# ─── Environment & Secrets ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+*.env.development
+*.env.production
+*.env.staging
+secrets.json
+credentials.json
+service-account.json
+serviceAccountKey.json
+firebase-adminsdk*.json
+gcp-key*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.cert
+*.crt
+auth.json
+token.json
+
+# ─── AI Tools (never commit IDE/agent context) ────────────────────────────────
+.claude/
+.cursor/
+.windsurf/
+.codeium/
+.continue/
+.aider*
+.copilot/
+.ai/
+
+# ─── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ─── Build Outputs ────────────────────────────────────────────────────────────
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.nuxt/
+server/dist/
+app/dist/
+shared/dist/
+
+# ─── TypeScript ───────────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ─── Test & Coverage ──────────────────────────────────────────────────────────
+coverage/
+*.lcov
+.nyc_output/
+project-details/
+# ─── OS Artifacts ─────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── Editor & IDE ─────────────────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Runtime / Temp ───────────────────────────────────────────────────────────
+tmp/
+temp/
+.cache/
+.parcel-cache/
+.vite/
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ─── Seed data snapshots (large CSV, download at runtime) ────────────────────
+seed/data/*.csv
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+*.local

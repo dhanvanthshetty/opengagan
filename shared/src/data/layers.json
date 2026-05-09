@@ -1,0 +1,36 @@
+[
+  {
+    "id": "aircraft",
+    "label": "Live Aircraft",
+    "desc": "Global ADS-B traffic, updated every 30 s",
+    "indicator": "aircraft"
+  },
+  {
+    "id": "udan",
+    "label": "UDAN Routes",
+    "desc": "Regional connectivity scheme flight arcs",
+    "indicator": "arc"
+  },
+  {
+    "id": "carbon",
+    "label": "Carbon Arcs",
+    "desc": "CO₂ footprint — set route on Carbon Twin",
+    "indicator": "arc-yellow"
+  },
+  {
+    "id": "fog",
+    "label": "Fog Radar",
+    "desc": "Low-visibility alerts at Indian airports",
+    "indicator": "radar",
+    "pingColor": "bg-blue-400",
+    "dotColor": "bg-blue-500"
+  },
+  {
+    "id": "firms",
+    "label": "FIRMS Hotspots",
+    "desc": "NASA VIIRS wildfire detections (24 h)",
+    "indicator": "radar",
+    "pingColor": "bg-amber-500",
+    "dotColor": "bg-red-500"
+  }
+]

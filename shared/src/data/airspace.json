@@ -1,0 +1,27 @@
+[
+  {
+    "id": "A",
+    "label": "Class A",
+    "description": "All operations IFR only. ATC clearance required at all times.",
+    "altitudeRange": "FL245 and above",
+    "color": "#8b5cf6",
+    "rules": ["IFR only", "ATC clearance required", "No VFR operations"]
+  },
+  {
+    "id": "C",
+    "label": "Class C — CTR",
+    "description": "Controlled Terminal Regions around major airports. Both IFR and VFR require ATC clearance.",
+    "altitudeRange": "Surface to FL195 (varies)",
+    "color": "#3b82f6",
+    "icaoCodes": ["VIDP", "VABB", "VOMM", "VOBG", "VOCL", "VOBL"],
+    "rules": ["IFR + VFR allowed", "ATC clearance required", "Transponder required"]
+  },
+  {
+    "id": "G",
+    "label": "Class G",
+    "description": "Uncontrolled airspace. No ATC service required. VFR and IFR operations permitted.",
+    "altitudeRange": "Surface to 1000 ft AGL",
+    "color": "#22c55e",
+    "rules": ["VFR + IFR allowed", "No ATC clearance needed", "No transponder required"]
+  }
+]

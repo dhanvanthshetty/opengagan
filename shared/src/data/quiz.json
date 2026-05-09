@@ -1,0 +1,37 @@
+[
+  {
+    "q": "What class of airspace is used at FL250 over India?",
+    "a": "Class A",
+    "options": ["Class A", "Class B", "Class C", "Class E"]
+  },
+  {
+    "q": "Which airspace requires ATC clearance for both VFR and IFR at major Indian airports?",
+    "a": "Class C",
+    "options": ["Class A", "Class C", "Class G", "Class D"]
+  },
+  {
+    "q": "In which airspace class can VFR pilots fly without ATC clearance in India?",
+    "a": "Class G",
+    "options": ["Class A", "Class C", "Class G", "Class B"]
+  },
+  {
+    "q": "What is the lower limit of Class A airspace in India?",
+    "a": "FL245",
+    "options": ["FL100", "FL180", "FL245", "FL350"]
+  },
+  {
+    "q": "Which ICAO code is Delhi IGI Airport?",
+    "a": "VIDP",
+    "options": ["VIDP", "VABB", "VOMM", "VOBG"]
+  },
+  {
+    "q": "What does SID stand for in aviation?",
+    "a": "Standard Instrument Departure",
+    "options": ["Standard Instrument Departure", "Straight In Descent", "Simplified IFR Direction", "Standard IFR Distance"]
+  },
+  {
+    "q": "What does STAR stand for?",
+    "a": "Standard Terminal Arrival Route",
+    "options": ["Standard Terminal Arrival Route", "Straight Track Approach Route", "Short Track Arrival Runway", "Standard Taxiway Arrival Route"]
+  }
+]

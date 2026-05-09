@@ -1,0 +1,39 @@
+# Render.com deployment configuration for OpenGagan API server
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: opengagan-api
+    runtime: node
+    region: INDIA
+    plan: free
+    buildCommand: cd server && npm ci && npm run build
+    startCommand: cd server && node dist/server/src/server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: MONGODB_URI
+        sync: false
+      - key: OPENSKY_CLIENT_ID
+        sync: false
+      - key: OPENSKY_CLIENT_SECRET
+        sync: false
+      - key: OPENSKY_TOKEN_URL
+        value: https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token
+      - key: FIRMS_MAP_KEY
+        sync: false
+      - key: OWM_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        value: https://opengagan.vercel.app
+      - key: INDIA_LAT_MIN
+        value: "6.5"
+      - key: INDIA_LAT_MAX
+        value: "37"
+      - key: INDIA_LON_MIN
+        value: "68"
+      - key: INDIA_LON_MAX
+        value: "97.5"

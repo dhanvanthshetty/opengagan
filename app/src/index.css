@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+
+  /* OpenGagan brand palette */
+  --og-navy:       #1a2540;   /* primary — logo "Open" + background */
+  --og-navy-deep:  #111c30;   /* darker edge shade */
+  --og-navy-soft:  #2d3d5c;
+  --og-olive:      #6b7838;   /* accent — logo "Gagan" */
+  --og-olive-lt:   #8a9b50;
+  --og-cream:      #ECE8D4;   /* panel surfaces + logo bg */
+  --og-cream-lt:   #F5F2E8;
+
+  /* Panel glass (cream on navy) */
+  --panel-bg:      rgba(236, 232, 212, 0.93);
+  --panel-border:  rgba(26, 37, 64, 0.18);
+  --panel-shadow:  0 8px 32px rgba(10, 16, 32, 0.40);
+}
+
+/* Body: deep navy — matches logo navy, dark enough for map tiles */
+body {
+  background: radial-gradient(
+    ellipse 120% 80% at 50% 50%,
+    #2c4060 0%,
+    #223356 30%,
+    #182844 70%,
+    #101e35 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--og-cream);
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* { box-sizing: border-box; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #111c30; }
+::-webkit-scrollbar-thumb { background: var(--og-olive); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--og-olive-lt); }
+
+/* Cream glass panel — floats on the navy background */
+.glass {
+  background: var(--panel-bg);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  color: var(--og-navy);
+}
