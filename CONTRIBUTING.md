@@ -5,7 +5,7 @@ Glad you're here. This is a fully open project — no auth, no paywalls, no gate
 ## Get it running (3 commands)
 
 ```bash
-git clone https://github.com/opengagan/opengagan
+git clone https://github.com/dhanvanthshetty/opengagan
 cp .env.example .env      # fill in your free API keys (see below)
 npm install && npm run seed && npm run dev
 ```

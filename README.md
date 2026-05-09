@@ -10,6 +10,7 @@
     <a href="#contributing">Contributing</a>
   </p>
   <br/>
+  <img src="https://img.shields.io/badge/version-1.0.0-blueviolet" alt="v1.0.0" />
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT" />
   <img src="https://img.shields.io/badge/stack-MERN-green" alt="MERN" />
   <img src="https://img.shields.io/badge/data-100%25%20free-orange" alt="Free data" />
@@ -135,7 +136,7 @@ You need Node 18+ and MongoDB running locally (or an Atlas connection string).
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/your-username/opengagan.git
+git clone https://github.com/dhanvanthshetty/opengagan.git
 cd opengagan
 npm install
 
@@ -258,7 +259,7 @@ opengagan/
 ├── shared/       Types and constants used by both
 │   └── src/
 │       ├── constants/   dgca.ts · india.ts · opensky.ts
-│       └── data/        airspace.json · quiz.json · airlines.json · layers.json · procedures.json
+│       └── data/        airspace.json · quiz.json · airlines.json · layers.json · procedures.json · reg-prefixes.json
 ├── seed/         One-time data loaders (airports + UDAN)
 └── docs/         Architecture notes
 ```

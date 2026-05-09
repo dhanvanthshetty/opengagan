@@ -16,7 +16,7 @@ export async function scrapeAMSSDelhi(): Promise<void> {
     const res = await axios.get<string>(AMSS_URL, {
       timeout: 15_000,
       headers: {
-        'User-Agent': 'OpenGagan/1.0 (https://github.com/opengagan; non-commercial research)',
+        'User-Agent': 'OpenGagan/1.0 (https://github.com/dhanvanthshetty/opengagan; non-commercial research)',
       },
       responseType: 'text',
     })

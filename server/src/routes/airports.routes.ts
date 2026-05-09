@@ -62,7 +62,7 @@ async function fetchAirportPhoto(
   iata?: string,
   wikipediaLink?: string
 ): Promise<PhotoResult> {
-  const headers = { 'User-Agent': 'OpenGagan/1.0 (open-source aviation map; github.com/opengagan)' }
+  const headers = { 'User-Agent': 'OpenGagan/1.0 (open-source aviation map; github.com/dhanvanthshetty/opengagan)' }
   const codes = [iata, icao].filter(Boolean) as string[]
   const airportKw = ['airport', 'terminal', 'runway', 'aerodrome', 'apron', 'departure', 'arrival', 'tarmac']
   const skipKw = ['flag', 'logo', 'icon', 'map', 'coat', 'seal', 'emblem', 'symbol', 'locator', 'blank', 'route']
