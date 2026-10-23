@@ -14,5 +14,9 @@
     "dotenv": "^16.0.0",
     "mongoose": "8.9.5",
     "tsx": "^4.0.0"
+  },
+  "overrides": {
+    "dompurify": "3.4.17",
+    "follow-redirects": "1.16.1"
   }
 }
