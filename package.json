@@ -12,7 +12,12 @@
   "devDependencies": {
     "concurrently": "^8.0.0",
     "dotenv": "^16.0.0",
-    "mongoose": "^8.0.0",
+    "mongoose": "8.9.5",
     "tsx": "^4.0.0"
+  },
+  "overrides": {
+    "body-parser": "2.4.0",
+    "dompurify": "3.4.17",
+    "follow-redirects": "1.16.1"
   }
 }
