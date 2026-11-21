@@ -1,4 +1,4 @@
-import cron from 'node-cron'
+import { schedule } from 'node-cron'
 import { Server as SocketIOServer } from 'socket.io'
 import { AircraftState } from '../models/AircraftState'
 import { Airport } from '../models/Airport'
@@ -18,7 +18,7 @@ export function startPollOpenSky(_io: SocketIOServer) {
   const pollSeconds = Math.min(60, Math.max(5, env.OPENSKY_POLL_SECONDS))
   const cronExpr = `*/${pollSeconds} * * * * *`
 
-  cron.schedule(cronExpr, async () => {
+  schedule(cronExpr, async () => {
     const now = new Date()
     const istHour =
       (now.getUTCHours() + now.getUTCMinutes() / 60 + IST_OFFSET_HOURS) % 24
@@ -114,7 +114,7 @@ export function startPollOpenSky(_io: SocketIOServer) {
 
     emitStates(validStates)
     logger.info(`${source}: ${validStates.length} aircraft over India`)
-  })
+  }, { name: 'poll-opensky' })
 
   logger.info(`Scheduled: OpenSky poll every ${pollSeconds}s (06:00–22:00 IST)`)
   if (env.OPENSKY_POLL_ALL_DAY) {
