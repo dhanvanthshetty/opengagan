@@ -1,9 +1,9 @@
-import { schedule } from 'node-cron'
+import { schedule, type ScheduledTask } from 'node-cron'
 import { loadOurAirports } from '../services/ourAirports.loader'
 import { logger } from '../utils/logger'
 
-export function startRefreshAirports() {
-  schedule(
+export function startRefreshAirports(): ScheduledTask {
+  const task = schedule(
     '30 20 * * *',
     async () => {
       logger.info('Starting nightly airport refresh...')
@@ -18,4 +18,6 @@ export function startRefreshAirports() {
   )
 
   logger.info('Scheduled: nightly airport refresh at 2:00 AM IST')
+
+  return task
 }

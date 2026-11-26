@@ -1,4 +1,4 @@
-import { schedule } from 'node-cron'
+import { schedule, type ScheduledTask } from 'node-cron'
 import { Server as SocketIOServer } from 'socket.io'
 import { AircraftState } from '../models/AircraftState'
 import { Airport } from '../models/Airport'
@@ -14,11 +14,11 @@ import type { StateVector } from '../../../shared/src/index'
 let lastEmptyLogAt = 0
 let openSkyCooldownUntil = 0
 
-export function startPollOpenSky(_io: SocketIOServer) {
+export function startPollOpenSky(_io: SocketIOServer): ScheduledTask {
   const pollSeconds = Math.min(60, Math.max(5, env.OPENSKY_POLL_SECONDS))
   const cronExpr = `*/${pollSeconds} * * * * *`
 
-  schedule(cronExpr, async () => {
+  const task = schedule(cronExpr, async () => {
     const now = new Date()
     const istHour =
       (now.getUTCHours() + now.getUTCMinutes() / 60 + IST_OFFSET_HOURS) % 24
@@ -120,4 +120,6 @@ export function startPollOpenSky(_io: SocketIOServer) {
   if (env.OPENSKY_POLL_ALL_DAY) {
     logger.info('OpenSky poll window override: OPENSKY_POLL_ALL_DAY=true')
   }
+
+  return task
 }

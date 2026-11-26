@@ -1,9 +1,9 @@
-import { schedule } from 'node-cron'
+import { schedule, type ScheduledTask } from 'node-cron'
 import { loadVonterUDAN } from '../services/vonterUDAN.loader'
 import { logger } from '../utils/logger'
 
-export function startMonthlyUDAN() {
-  schedule(
+export function startMonthlyUDAN(): ScheduledTask {
+  const task = schedule(
     '30 21 28-31 * *',
     async () => {
       const d = new Date()
@@ -20,4 +20,6 @@ export function startMonthlyUDAN() {
   )
 
   logger.info('Scheduled: monthly UDAN refresh on 1st of month')
+
+  return task
 }

@@ -1,9 +1,9 @@
-import { schedule } from 'node-cron'
+import { schedule, type ScheduledTask } from 'node-cron'
 import { scrapeAMSSDelhi } from '../services/amssDelhi.scraper'
 import { logger } from '../utils/logger'
 
-export function startScrapeAMSS() {
-  schedule(
+export function startScrapeAMSS(): ScheduledTask {
+  const task = schedule(
     '*/10 * * * *',
     async () => {
       try {
@@ -16,4 +16,6 @@ export function startScrapeAMSS() {
   )
 
   logger.info('Scheduled: AMSS Delhi scrape every 10 min')
+
+  return task
 }
